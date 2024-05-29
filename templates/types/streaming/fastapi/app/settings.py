@@ -90,7 +90,7 @@ def init_gemini():
         "text-embedding-004": "models/text-embedding-004",
     }
 
-    Settings.llm = Gemini(model=model_map[os.getenv("MODEL")])
+    Settings.llm = Gemini(model_name=model_map[os.getenv("MODEL")])
     Settings.embed_model = GeminiEmbedding(
         model_name=embed_model_map[os.getenv("EMBEDDING_MODEL")]
     )
